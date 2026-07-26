@@ -19,7 +19,12 @@ export default function CareerPage() {
   const [search, setSearch] = useState("");
   const [filter, setFilter] = useState("all");
 
-  const stats = { applied: MOCK_JOBS.filter((j) => j.status === "applied").length, interview: MOCK_JOBS.filter((j) => j.status === "interview").length, offer: MOCK_JOBS.filter((j) => j.status === "offer").length, rejected: MOCK_JOBS.filter((j) => j.status === "rejected").length };
+  const stats = {
+    applied: MOCK_JOBS.filter((j) => j.status === "applied").length,
+    interview: MOCK_JOBS.filter((j) => j.status === "interview").length,
+    offer: MOCK_JOBS.filter((j) => (j.status as string) === "offer").length,
+    rejected: MOCK_JOBS.filter((j) => j.status === "rejected").length,
+  };
 
   return (
     <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="space-y-6">
