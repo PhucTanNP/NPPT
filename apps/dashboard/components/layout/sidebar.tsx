@@ -52,7 +52,7 @@ export function Sidebar() {
       <div className="flex h-14 items-center justify-between px-4 border-b border-border">
         {!collapsed && (
           <Link href="/" className="flex items-center gap-2">
-            <Sparkles className="h-5 w-5 text-primary" />
+            <img src="/logonppt.png" alt="AI OS" className="h-7 w-auto rounded-lg" />
             <span className="font-semibold text-sm">AI OS</span>
           </Link>
         )}
