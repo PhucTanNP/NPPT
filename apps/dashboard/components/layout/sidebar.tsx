@@ -3,6 +3,7 @@
 import {
   MessageSquare,
   Newspaper,
+  Briefcase,
   LayoutDashboard,
   ChevronLeft,
   ChevronRight,
@@ -16,6 +17,7 @@ import { motion } from "framer-motion";
 const navItems = [
   { name: "Dashboard", href: "/", icon: LayoutDashboard },
   { name: "AI News", href: "/news", icon: Newspaper },
+  { name: "AI Jobs", href: "/jobs", icon: Briefcase },
   { name: "AI Chat", href: "/chat", icon: MessageSquare },
 ];
 
