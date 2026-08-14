@@ -1,22 +1,11 @@
 "use client";
 
 import {
-  Briefcase,
   MessageSquare,
-  GraduationCap,
-  Library,
-  Brain,
-  Code,
-  FolderKanban,
-  FileText,
-  BarChart3,
-  Settings,
   Newspaper,
   LayoutDashboard,
   ChevronLeft,
   ChevronRight,
-  Shield,
-  Sparkles,
 } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -28,16 +17,6 @@ const navItems = [
   { name: "Dashboard", href: "/", icon: LayoutDashboard },
   { name: "AI News", href: "/news", icon: Newspaper },
   { name: "AI Chat", href: "/chat", icon: MessageSquare },
-  { name: "Knowledge", href: "/knowledge", icon: Library },
-  { name: "Research", href: "/research", icon: Brain },
-  { name: "Portfolio", href: "/portfolio", icon: Briefcase },
-  { name: "Career Hub", href: "/career", icon: GraduationCap },
-  { name: "Coding Hub", href: "/coding", icon: Code },
-  { name: "Projects", href: "/projects", icon: FolderKanban },
-  { name: "Documents", href: "/documents", icon: FileText },
-  { name: "Analytics", href: "/analytics", icon: BarChart3 },
-  { name: "Automation", href: "/automation", icon: Settings },
-  { name: "Admin", href: "/admin", icon: Shield },
 ];
 
 export function Sidebar() {

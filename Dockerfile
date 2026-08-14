@@ -5,11 +5,17 @@ FROM base AS deps
 RUN apk add --no-cache libc6-compat
 WORKDIR /app
 
-COPY package.json turbo.json ./
-COPY apps/dashboard/package.json ./apps/dashboard/
-COPY packages/*/package.json ./
+# Root manifests + lockfile
+COPY package.json package-lock.json turbo.json ./
 
-RUN npm ci --only=production
+# Workspace manifests — giữ nguyên cấu trúc thư mục cho npm workspaces
+COPY apps ./apps
+COPY packages ./packages
+
+# Dọn node_modules phòng hờ nếu lỡ nằm trong build context
+RUN find . -type d -name node_modules -prune -exec rm -rf {} + 2>/dev/null || true
+
+RUN npm ci
 
 # Build
 FROM base AS builder

@@ -16,10 +16,7 @@
     "plugins": [{ "name": "next" }],
     "paths": {
       "@/*": ["./*"],
-      "@ui/*": ["../../packages/shared-ui/src/*"],
-      "@utils/*": ["../../packages/shared-utils/*"],
-      "@api/*": ["../../packages/api-client/src/*"],
-      "@ai/*": ["../../packages/ai-client/src/*"]
+      "@ui/*": ["../../packages/shared-ui/src/*"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],

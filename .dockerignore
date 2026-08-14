@@ -1,0 +1,24 @@
+# Dependencies
+node_modules
+.turbo
+
+# Build outputs
+.next
+dist
+out
+*.tsbuildinfo
+
+# Git
+.git
+.gitignore
+
+# Environment
+.env
+.env.local
+.env.production
+.env.development
+
+# Logs & misc
+npm-debug.log*
+.DS_Store
+*.md

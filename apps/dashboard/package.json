@@ -28,8 +28,6 @@
     "zod": "^3.23.0",
     "@hookform/resolvers": "^3.6.0",
     "zustand": "^4.5.0",
-    "@aios/api-client": "*",
-    "@aios/ai-client": "*",
     "@aios/shared-ui": "*"
   },
   "devDependencies": {
