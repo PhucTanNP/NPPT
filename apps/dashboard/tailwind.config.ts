@@ -38,6 +38,21 @@ const config: Config = {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        brand: {
+          50: '#f0f9ff',
+          100: '#e0f2fe',
+          200: '#bae6fd',
+          500: '#0284c7',
+          600: '#0369a1',
+          700: '#075985',
+          indigo: '#4f46e5',
+          purple: '#7c3aed',
+        },
+      },
+      boxShadow: {
+        'soft': '0 4px 20px -2px rgba(15, 23, 42, 0.05), 0 2px 6px -1px rgba(15, 23, 42, 0.03)',
+        'glow': '0 0 25px -4px rgba(2, 132, 199, 0.25)',
+        'card': '0 10px 30px -5px rgba(15, 23, 42, 0.06), 0 0 0 1px rgba(226, 232, 240, 0.8)',
       },
       borderRadius: {
         lg: "var(--radius)",
