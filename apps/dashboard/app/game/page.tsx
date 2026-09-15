@@ -218,8 +218,12 @@ export default function StandaloneWishlistGamePage() {
 
     const sendResultToBackend = async (book: Book) => {
       try {
-        const backendUrl = process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000";
-        await fetch(`${backendUrl}/api/v1/game/result`, {
+        const rawUrl = (process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000").replace(/\/+$/, "");
+        const endpoint = rawUrl.endsWith("/api/v1")
+          ? `${rawUrl}/game/result`
+          : `${rawUrl}/api/v1/game/result`;
+
+        await fetch(endpoint, {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({
